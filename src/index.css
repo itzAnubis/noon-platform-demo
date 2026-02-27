@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+}
+
+html, body {
+  direction: rtl;
+  text-align: right;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-[#C2185B] text-white rounded-lg font-semibold hover:bg-rose-800 transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-[#D4AF37] text-[#C2185B] rounded-lg font-semibold hover:bg-[#D4AF37] hover:bg-opacity-10 transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-[#C2185B] mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600 mb-12;
+  }
+
+  .card-base {
+    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden;
+  }
+
+  .scroll-smooth-anchor {
+    scroll-behavior: smooth;
+  }
+}
