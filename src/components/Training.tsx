@@ -4,7 +4,7 @@ const courses = [
   {
     id: 1,
     image:
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop',
+      '/images/digital_marketing.png',
     title: 'التسويق الرقمي والإعلانات',
     instructor: 'أ. د. أحمد السيد',
     duration: '8 أسابيع',
@@ -16,9 +16,9 @@ const courses = [
   {
     id: 2,
     image:
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop',
+      '/images/entrepreneur.png',
     title: 'ريادة الأعمال والعمل الحر',
-    instructor: 'م. فاطمة أحمد',
+    instructor: 'م. أحمد محمد',
     duration: '10 أسابيع',
     level: 'متوسط',
     description:
@@ -28,7 +28,7 @@ const courses = [
   {
     id: 3,
     image:
-      'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&h=300&fit=crop',
+      '/images/startup.png',
     title: 'الحرف اليدويّة والفنون',
     instructor: 'الفنانة سامية حسن',
     duration: '12 أسبوع',
@@ -39,7 +39,7 @@ const courses = [
   {
     id: 4,
     image:
-      'https://images.unsplash.com/photo-1523707622537-b85faf00c69b?w=500&h=300&fit=crop',
+      '/images/photography.png',
     title: 'التصوير الفوتوغرافي الاحترافي',
     instructor: 'محمود علي - مصور محترف',
     duration: '6 أسابيع',
@@ -51,7 +51,7 @@ const courses = [
   {
     id: 5,
     image:
-      'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&h=300&fit=crop',
+      '/images/saw.png',
     title: 'الخياطة والتفصيل الحديث',
     instructor: 'أستاذة ليلى إبراهيم',
     duration: '9 أسابيع',
@@ -63,9 +63,9 @@ const courses = [
   {
     id: 6,
     image:
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop',
+      '/images/startup2.png',
     title: 'إدارة المشاريع الصغيرة',
-    instructor: 'د. محمود عبدالله',
+    instructor: 'د. فاطمه محمد',
     duration: '10 أسابيع',
     level: 'متقدم',
     description:

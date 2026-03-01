@@ -13,9 +13,9 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Instagram, label: 'Instagram', href: 'https://instagram.com' },
-    { icon: Facebook, label: 'Facebook', href: 'https://facebook.com' },
-    { icon: MessageCircle, label: 'WhatsApp', href: 'https://whatsapp.com' },
+    { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/noon_pharos' },
+    { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61582801259788' },
+    { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/201211508497' },
   ];
 
   return (
@@ -25,7 +25,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-4">
               <span className="text-[#D4AF37]">نُ</span>
-              <span className="mr-2">نون منونة</span>
+              <span className="mr-2">نون</span>
             </h3>
             <p className="text-pink-100">
               منصة متكاملة لتمكين المرأة المصرية اقتصادياً واجتماعياً
@@ -51,8 +51,18 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">تواصلي معنا</h4>
             <div className="flex flex-col gap-3 text-pink-100">
-              <p>البريد: info@noonmonawwa.com</p>
-              <p>الهاتف: +20 100 123 4567</p>
+              <p>
+                البريد:{' '}
+                <a href="mailto:noonpharos@gmail.com" className="hover:text-[#D4AF37] transition-colors">
+                  noonpharos@gmail.com
+                </a>
+              </p>
+              <p>
+                الهاتف:{' '}
+                <a href="tel:+201001234567" className="hover:text-[#D4AF37] transition-colors" dir="ltr">
+                  +20 100 123 4567
+                </a>
+              </p>
               <p>القاهرة، مصر</p>
             </div>
           </div>
@@ -81,7 +91,7 @@ export default function Footer() {
 
         <div className="border-t border-pink-400 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-pink-100 text-sm">
-            © 2024 نون منونة - جميع الحقوق محفوظة
+            © 2026 نون - جميع الحقوق محفوظة
           </p>
           <button
             onClick={handleScrollTop}

@@ -41,7 +41,7 @@ export default function Header() {
           <div className="flex-1 text-center">
             <h1 className="text-3xl font-bold">
               <span className="text-[#C2185B]">نُ</span>
-              <span className="text-gray-800 mr-2">نون منونة</span>
+              <span className="text-gray-800 mr-2">نون</span>
             </h1>
           </div>
 
