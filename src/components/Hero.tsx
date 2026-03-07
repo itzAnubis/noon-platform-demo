@@ -1,13 +1,7 @@
 import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
-  const handleScroll = (id: string) => {
-    const element = document.querySelector(`#${id}`);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section
       id="home"
@@ -26,20 +20,20 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
-          <button
-            onClick={() => handleScroll('marketplace')}
+          <Link
+            to="/marketplace"
             className="btn-primary inline-flex items-center justify-center gap-2"
           >
             <span>تصفحي السوق</span>
             <ArrowLeft size={20} />
-          </button>
-          <button
-            onClick={() => handleScroll('stories')}
+          </Link>
+          <Link
+            to="/training"
             className="btn-secondary inline-flex items-center justify-center gap-2"
           >
             <span>انضمي إلينا</span>
             <ArrowLeft size={20} />
-          </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-3 gap-4 md:gap-8 mt-16 text-center">
