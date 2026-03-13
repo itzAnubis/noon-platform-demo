@@ -15,7 +15,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/noon_pharos' },
     { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61582801259788' },
-    { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/201211508497' },
+    // { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/201211508497' },
   ];
 
   return (
