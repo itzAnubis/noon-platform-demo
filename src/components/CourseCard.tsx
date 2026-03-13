@@ -10,6 +10,7 @@ interface CourseCardProps {
   level: string;
   description: string;
   participants: number;
+  tags?: string[];
 }
 
 export default function CourseCard({

@@ -23,10 +23,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-2xl font-bold mb-4">
-              <span className="text-[#D4AF37]">نُ</span>
-              <span className="mr-2">نون</span>
-            </h3>
+            <div className="mb-4">
+              <img 
+                src="/images/logo.png" 
+                alt="نون Logo" 
+                className="h-28 w-auto object-contain" 
+              />
+            </div>
             <p className="text-pink-100">
               منصة متكاملة لتمكين المرأة المصرية اقتصادياً واجتماعياً
             </p>

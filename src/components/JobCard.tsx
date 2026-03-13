@@ -7,6 +7,7 @@ interface JobCardProps {
   salary: string;
   location: string;
   requirements: string[];
+  tags?: string[];
 }
 
 export default function JobCard({

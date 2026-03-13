@@ -1,4 +1,4 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogIn } from 'lucide-react';
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
-          <div className="flex-1">
+          <div className="flex-1 flex items-center gap-3">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden p-2"
@@ -28,14 +28,24 @@ export default function Header() {
                 <Menu size={24} className="text-[#C2185B]" />
               )}
             </button>
+
+            {/* Login button — visible on desktop */}
+            <Link
+              to="/login"
+              className="hidden md:flex items-center gap-2 px-4 py-2 border-2 border-[#C2185B] text-[#C2185B] rounded-lg font-semibold text-sm hover:bg-[#C2185B] hover:text-white transition-all duration-300"
+            >
+              <LogIn size={16} />
+              <span>تسجيل الدخول</span>
+            </Link>
           </div>
 
           <div className="flex-1 text-center">
-            <Link to="/">
-              <h1 className="text-3xl font-bold">
-                <span className="text-[#C2185B]">نُ</span>
-                <span className="text-gray-800 mr-2">نون</span>
-              </h1>
+            <Link to="/" className="inline-block">
+              <img 
+                src="/images/logo.png" 
+                alt="Logo" 
+                className="h-28 w-auto object-contain" 
+              />
             </Link>
           </div>
 
@@ -62,6 +72,17 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
+
+          {/* Mobile login link */}
+          {isOpen && (
+            <Link
+              to="/login"
+              onClick={() => setIsOpen(false)}
+              className="block py-2 px-3 font-medium text-[#C2185B] md:hidden"
+            >
+              تسجيل الدخول
+            </Link>
+          )}
         </div>
       </nav>
     </header>

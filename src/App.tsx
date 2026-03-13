@@ -7,6 +7,8 @@ import Jobs from './pages/Jobs';
 import Training from './pages/Training';
 import Team from './pages/Team';
 import CourseDetails from './pages/CourseDetails';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/training" element={<Training />} />
           <Route path="/training/:courseId" element={<CourseDetails />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
         <Footer />
       </div>

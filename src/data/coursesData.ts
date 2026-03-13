@@ -7,7 +7,19 @@ export interface Course {
     level: string;
     description: string;
     participants: number;
+    tags: string[];
 }
+
+export const courseLevels = ['الكل', 'مبتدئ', 'متوسط', 'متقدم'];
+
+export const allCourseTags = [
+    'تسويق',
+    'ريادة',
+    'حرف يدوية',
+    'تصوير',
+    'خياطة',
+    'إدارة',
+];
 
 export const courses: Course[] = [
     {
@@ -20,6 +32,7 @@ export const courses: Course[] = [
         description:
             'تعلمي استراتيجيات التسويق الحديثة وكيفية الوصول لعملاء جدد عبر الإنترنت',
         participants: 342,
+        tags: ['تسويق'],
     },
     {
         id: 2,
@@ -31,6 +44,7 @@ export const courses: Course[] = [
         description:
             'كيفية بدء مشروعك الخاص وإدارته بنجاح من البداية إلى الاحتراف',
         participants: 287,
+        tags: ['ريادة', 'إدارة'],
     },
     {
         id: 3,
@@ -41,6 +55,7 @@ export const courses: Course[] = [
         level: 'مبتدئ',
         description: 'تعلمي فنون اليدويات الجميلة وحول أعمالك إلى مشروع مربح',
         participants: 156,
+        tags: ['حرف يدوية'],
     },
     {
         id: 4,
@@ -52,6 +67,7 @@ export const courses: Course[] = [
         description:
             'احترفي التصوير واستخدمي مهاراتك في كسب دخل إضافي عبر الإنترنت',
         participants: 198,
+        tags: ['تصوير'],
     },
     {
         id: 5,
@@ -63,6 +79,7 @@ export const courses: Course[] = [
         description:
             'تعلمي الخياطة من الصفر وأنشئي تصاميمك الخاصة وتوسعي سوقك',
         participants: 312,
+        tags: ['خياطة', 'حرف يدوية'],
     },
     {
         id: 6,
@@ -74,5 +91,6 @@ export const courses: Course[] = [
         description:
             'تعرفي على أفضل الممارسات في إدارة المشاريع والعمليات التجارية',
         participants: 221,
+        tags: ['إدارة', 'ريادة'],
     },
 ];

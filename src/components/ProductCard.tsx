@@ -7,6 +7,7 @@ interface ProductCardProps {
   seller: string;
   rating: number;
   reviews: number;
+  category?: string;
 }
 
 export default function ProductCard({
