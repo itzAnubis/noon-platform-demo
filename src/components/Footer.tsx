@@ -1,4 +1,5 @@
-import { Instagram, Facebook, MessageCircle, ArrowUp } from 'lucide-react';
+import { Instagram, Facebook, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const handleScrollTop = () => {
@@ -6,16 +7,17 @@ export default function Footer() {
   };
 
   const quickLinks = [
-    { label: 'عن المنصة', href: '#' },
-    { label: 'الشروط والأحكام', href: '#' },
-    { label: 'سياسة الخصوصية', href: '#' },
-    { label: 'اتصلي بنا', href: '#' },
+    { label: 'الرئيسية', to: '/' },
+    { label: 'سوق نُ', to: '/marketplace' },
+    { label: 'فرص عمل', to: '/jobs' },
+    { label: 'التدريب', to: '/training' },
+    { label: 'الفعاليات', to: '/events' },
+    { label: 'فريق العمل', to: '/team' },
   ];
 
   const socialLinks = [
     { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/noon_pharos' },
     { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61582801259788' },
-    // { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/201211508497' },
   ];
 
   return (
@@ -40,12 +42,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.to}
                     className="text-pink-100 hover:text-[#D4AF37] transition-colors duration-300"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -10,6 +10,7 @@ export default function Header() {
     { id: 'marketplace', label: 'سوق نُ', to: '/marketplace' },
     { id: 'jobs', label: 'فرص عمل', to: '/jobs' },
     { id: 'training', label: 'التدريب', to: '/training' },
+    { id: 'events', label: 'الفعاليات', to: '/events' },
     { id: 'team', label: 'فريق العمل', to: '/team' },
   ];
 
