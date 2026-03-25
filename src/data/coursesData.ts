@@ -24,7 +24,7 @@ export const allCourseTags = [
 export const courses: Course[] = [
     {
         id: 1,
-        image: '/images/digital_marketing.png',
+        image: '/images/digital_marketing.webp',
         title: 'التسويق الرقمي والإعلانات',
         instructor: 'أ. د. أحمد السيد',
         duration: '8 أسابيع',
@@ -36,7 +36,7 @@ export const courses: Course[] = [
     },
     {
         id: 2,
-        image: '/images/entrepreneur.png',
+        image: '/images/entrepreneur.webp',
         title: 'ريادة الأعمال والعمل الحر',
         instructor: 'م. أحمد محمد',
         duration: '10 أسابيع',
@@ -48,7 +48,7 @@ export const courses: Course[] = [
     },
     {
         id: 3,
-        image: '/images/startup.png',
+        image: '/images/startup.webp',
         title: 'الحرف اليدويّة والفنون',
         instructor: 'الفنانة سامية حسن',
         duration: '12 أسبوع',

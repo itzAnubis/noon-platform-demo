@@ -161,6 +161,7 @@ export default function Team() {
 
     return (
         <section className="py-20 px-4 bg-gradient-to-b from-pink-50 to-white min-h-screen overflow-hidden dir-rtl" dir="rtl">
+    <h1 className="sr-only">فريق العمل</h1>
             <style>{`
                 .hide-scrollbar::-webkit-scrollbar { display: none; }
                 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

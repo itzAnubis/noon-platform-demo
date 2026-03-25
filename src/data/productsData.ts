@@ -82,7 +82,7 @@ export const products: Product[] = [
   },
 //   {
 //     id: 7,
-//     image: '/images/startup.png',
+//     image: '/images/startup.webp',
 //     name: 'فستان كروشيه صيفي أنيق',
 //     price: 550,
 //     seller: 'هدى محمد',

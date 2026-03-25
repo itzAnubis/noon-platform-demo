@@ -27,7 +27,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <img 
-                src="/images/logo.png" 
+                src="/images/logo.webp" 
                 alt="نون Logo" 
                 className="h-28 w-auto object-contain" 
               />

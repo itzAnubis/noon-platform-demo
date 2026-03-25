@@ -26,7 +26,7 @@ export const events: Event[] = [
     date: '2026-04-05',
     time: '10:00 صباحاً - 2:00 مساءً',
     location: 'مركز نون الثقافي، الإسكندرية',
-    image: '/images/startup.png',
+    image: '/images/startup.webp',
     category: 'ورش عمل',
   },
   {
@@ -37,7 +37,7 @@ export const events: Event[] = [
     date: '2026-04-12',
     time: '5:00 مساءً - 9:00 مساءً',
     location: 'فندق هيلتون، القاهرة',
-    image: '/images/entrepreneur.png',
+    image: '/images/entrepreneur.webp',
     category: 'ملتقيات',
   },
   {
@@ -48,7 +48,7 @@ export const events: Event[] = [
     date: '2026-04-18',
     time: '9:00 صباحاً - 1:00 مساءً',
     location: 'أونلاين عبر زووم',
-    image: '/images/digital_marketing.png',
+    image: '/images/digital_marketing.webp',
     category: 'تدريب',
   },
   {

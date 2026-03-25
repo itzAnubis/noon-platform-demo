@@ -43,7 +43,7 @@ export default function Header() {
           <div className="flex-1 text-center">
             <Link to="/" className="inline-block">
               <img 
-                src="/images/logo.png" 
+                src="/images/logo.webp" 
                 alt="Logo" 
                 className="h-28 w-auto object-contain" 
               />
