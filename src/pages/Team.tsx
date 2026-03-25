@@ -1,4 +1,6 @@
-import { Users, Briefcase, CheckCircle } from 'lucide-react';
+import { useRef } from 'react';
+import { Users, CheckCircle, ChevronRight, ChevronLeft } from 'lucide-react';
+
 
 interface TeamMember {
     id: number;
@@ -11,95 +13,238 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
     {
         id: 1,
-        name: 'د. مريم عبدالرحمن',
-        role: 'المؤسِّسة والمديرة التنفيذية',
+        name: 'آية عبد الرؤوف',
+        role: 'عضو فريق نون',
         responsibilities: [
-            'وضع الرؤية والاستراتيجية العامة للمنصة',
-            'إدارة الشراكات مع المؤسسات الداعمة',
-            'الإشراف على جميع الأقسام والفرق',
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
         ],
-        avatar: 'https://ui-avatars.com/api/?name=مريم&background=C2185B&color=fff&size=128&font-size=0.4',
+        avatar: '/images/noon_team/اية عبد الرؤوف.jpeg',
     },
     {
         id: 2,
-        name: 'م. أحمد السيد',
-        role: 'مدير التقنية',
+        name: 'حنان أحمد',
+        role: 'عضو فريق نون',
         responsibilities: [
-            'تطوير وصيانة المنصة الإلكترونية',
-            'ضمان أمن البيانات وحماية الخصوصية',
-            'تحسين تجربة المستخدم والأداء التقني',
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
         ],
-        avatar: 'https://ui-avatars.com/api/?name=أحمد&background=D4AF37&color=fff&size=128&font-size=0.4',
+        avatar: '/images/noon_team/حنان احمد.jpeg',
     },
     {
         id: 3,
-        name: 'أ. نورا حسين',
-        role: 'مديرة التدريب والتطوير',
+        name: 'سلمى أشرف',
+        role: 'عضو فريق نون',
         responsibilities: [
-            'تصميم المناهج والبرامج التدريبية',
-            'التنسيق مع المدربين والخبراء',
-            'متابعة تقدم المتدربات وقياس الأثر',
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
         ],
-        avatar: 'https://ui-avatars.com/api/?name=نورا&background=E91E63&color=fff&size=128&font-size=0.4',
+        avatar: '/images/noon_team/سلمى اشرف.jpeg',
     },
     {
         id: 4,
-        name: 'أ. سارة محمود',
-        role: 'مسؤولة الدعم المجتمعي',
+        name: 'سهيلة كمال',
+        role: 'عضو فريق نون',
         responsibilities: [
-            'إدارة برامج الدعم النفسي والاجتماعي',
-            'بناء شبكة من المتطوعين والداعمين',
-            'تنظيم الفعاليات المجتمعية والتوعوية',
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
         ],
-        avatar: 'https://ui-avatars.com/api/?name=سارة&background=FF5722&color=fff&size=128&font-size=0.4',
+        avatar: '/images/noon_team/سهيلة كمال.jpeg',
+    },
+    {
+        id: 5,
+        name: 'شهاب سلامة',
+        role: 'عضو فريق نون',
+        responsibilities: [
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
+        ],
+        avatar: '/images/noon_team/شهاب سلامه.jpeg',
+    },
+    {
+        id: 6,
+        name: 'شهد الشناوي',
+        role: 'عضو فريق نون',
+        responsibilities: [
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
+        ],
+        avatar: '/images/noon_team/شهد الشناوى.jpeg',
+    },
+    {
+        id: 7,
+        name: 'عبدالرحمن مجدي',
+        role: 'عضو فريق نون',
+        responsibilities: [
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
+        ],
+        avatar: '/images/noon_team/عبدالرحمن مجدى.jpeg',
+    },
+    {
+        id: 8,
+        name: 'عبدالله ياسر',
+        role: 'عضو فريق نون',
+        responsibilities: [
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
+        ],
+        avatar: '/images/noon_team/عبدالله ياسر.jpeg',
+    },
+    {
+        id: 9,
+        name: 'مريم حسن',
+        role: 'عضو فريق نون',
+        responsibilities: [
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
+        ],
+        avatar: '/images/noon_team/مريم حسن.jpeg',
+    },
+    {
+        id: 10,
+        name: 'منة أحمد',
+        role: 'عضو فريق نون',
+        responsibilities: [
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
+        ],
+        avatar: '/images/noon_team/منه احمد.jpeg',
+    },
+    {
+        id: 11,
+        name: 'نورسين محمد',
+        role: 'عضو فريق نون',
+        responsibilities: [
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
+        ],
+        avatar: '/images/noon_team/نورسين محمد.jpeg',
+    },
+    {
+        id: 12,
+        name: 'يحيي عادل',
+        role: 'عضو فريق نون',
+        responsibilities: [
+            'العمل على تحقيق أهداف المنصة',
+            'تقديم الدعم اللازم لنجاح المبادرات',
+            'المشاركة في تطوير وتنمية المجتمع',
+        ],
+        avatar: '/images/noon_team/يحيي عادل.jpeg',
     },
 ];
-
 export default function Team() {
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    // Fixed Scroll Logic for RTL: In Arabic layout, 'Next' usually scrolls Left
+    const scroll = (direction: 'left' | 'right') => {
+        if (scrollContainerRef.current) {
+            const scrollAmount = 350;
+            const multiplier = direction === 'left' ? -1 : 1;
+            scrollContainerRef.current.scrollBy({ 
+                left: scrollAmount * multiplier, 
+                behavior: 'smooth' 
+            });
+        }
+    };
+
     return (
-        <section className="py-20 px-4 bg-gradient-to-b from-pink-50 to-white min-h-screen">
+        <section className="py-20 px-4 bg-gradient-to-b from-pink-50 to-white min-h-screen overflow-hidden dir-rtl" dir="rtl">
+            <style>{`
+                .hide-scrollbar::-webkit-scrollbar { display: none; }
+                .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+                .font-tajawal { font-family: 'Tajawal', sans-serif; }
+            `}</style>
+            
             <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <div className="inline-flex items-center justify-center p-3 bg-[#C2185B] bg-opacity-10 rounded-full mb-6">
-                        <Users size={36} className="text-[#C2185B]" />
+                <div className="text-center mb-12">
+                    <div className="inline-flex items-center justify-center p-4 bg-[#C2185B] rounded-2xl mb-6 shadow-lg shadow-pink-200">
+                        <Users size={32} className="text-white" />
                     </div>
-                    <h2 className="section-title">فريق العمل</h2>
-                    <p className="section-subtitle">
-                        فريق متميز يعمل بشغف لتمكين المرأة المصرية وتحقيق رؤيتنا
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight font-tajawal">
+                        فريق العمل
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-tajawal">
+                        نخبة من الكفاءات المبدعة تعمل معاً لتحقيق رؤية منصة نون
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {/* Navigation Buttons */}
+                <div className="flex justify-end gap-3 mb-8 px-4">
+                    <button 
+                        onClick={() => scroll('right')}
+                        className="p-3 rounded-xl bg-white shadow-sm border border-pink-100 text-[#C2185B] hover:bg-[#C2185B] hover:text-white transition-all active:scale-95"
+                    >
+                        <ChevronRight size={24} />
+                    </button>
+                    <button 
+                        onClick={() => scroll('left')}
+                        className="p-3 rounded-xl bg-white shadow-sm border border-pink-100 text-[#C2185B] hover:bg-[#C2185B] hover:text-white transition-all active:scale-95"
+                    >
+                        <ChevronLeft size={24} />
+                    </button>
+                </div>
+
+                {/* Slider */}
+                <div 
+                    ref={scrollContainerRef}
+                    className="flex overflow-x-auto gap-6 pb-12 pt-4 px-4 snap-x snap-mandatory hide-scrollbar"
+                >
                     {teamMembers.map((member) => (
                         <div
                             key={member.id}
-                            className="card-base p-6 text-center group hover:-translate-y-2 transition-all duration-300"
+                            className="relative group bg-white rounded-[2rem] shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-pink-200/40 transition-all duration-500 w-[300px] sm:w-[320px] shrink-0 snap-center flex flex-col border border-white overflow-hidden"
                         >
-                            <div className="relative mb-6">
-                                <img
-                                    src={member.avatar}
-                                    alt={member.name}
-                                    className="w-24 h-24 rounded-full mx-auto border-4 border-[#D4AF37] shadow-lg group-hover:scale-110 transition-transform duration-300"
-                                />
+                            {/* Card Header with Glassmorphism overlay */}
+                            <div className="h-32 bg-gradient-to-br from-[#C2185B] to-pink-500 relative">
+                                <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
                             </div>
 
-                            <h3 className="text-xl font-bold text-[#C2185B] mb-2">
-                                {member.name}
-                            </h3>
-
-                            <div className="inline-flex items-center gap-2 bg-[#D4AF37] bg-opacity-15 text-[#C2185B] px-4 py-1.5 rounded-full text-sm font-semibold mb-5">
-                                <Briefcase size={14} />
-                                <span>{member.role}</span>
-                            </div>
-
-                            <div className="text-right space-y-3">
-                                <p className="text-sm font-semibold text-gray-700 mb-2">المسؤوليات:</p>
-                                {member.responsibilities.map((resp, idx) => (
-                                    <div key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                                        <CheckCircle size={16} className="text-[#D4AF37] flex-shrink-0 mt-0.5" />
-                                        <span>{resp}</span>
+                            {/* Avatar Section */}
+                            <div className="relative -mt-16 flex justify-center z-20">
+                                <div className="p-1 bg-white rounded-full shadow-xl">
+                                    <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white aspect-square">
+                                        <img
+                                            src={member.avatar}
+                                            alt={member.name}
+                                            className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-500"
+                                        />
                                     </div>
-                                ))}
+                                    <div className="absolute bottom-2 right-6 w-4 h-4 bg-green-500 border-2 border-white rounded-full shadow-sm"></div>
+                                </div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="p-6 pt-4 flex flex-col flex-1">
+                                <div className="text-center mb-6">
+                                    <h3 className="text-xl font-bold text-gray-800 font-tajawal group-hover:text-[#C2185B] transition-colors">
+                                        {member.name}
+                                    </h3>
+                                    <span className="text-sm font-medium text-pink-500 bg-pink-50 px-3 py-1 rounded-lg mt-2 inline-block">
+                                        {member.role}
+                                    </span>
+                                </div>
+
+                                <div className="space-y-3 bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                                    <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">المسؤوليات</p>
+                                    {member.responsibilities.map((resp, idx) => (
+                                        <div key={idx} className="flex items-start gap-2">
+                                            <CheckCircle size={14} className="text-[#D4AF37] shrink-0 mt-0.5" />
+                                            <span className="text-sm text-gray-600 leading-tight">{resp}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     ))}
