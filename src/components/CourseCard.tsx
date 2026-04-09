@@ -1,5 +1,6 @@
 import { Clock, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 interface CourseCardProps {
   id: number;
@@ -38,19 +39,27 @@ export default function CourseCard({
 
   return (
     <Link to={`/training/${id}`} className="block">
-      <div className="card-base overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+      <motion.div 
+        className="card-base overflow-hidden transition-all duration-300"
+        whileHover={{ y: -8, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
+      >
         <div className="relative h-40 overflow-hidden bg-gray-200">
           <img
             src={image}
             alt={title}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
           />
         </div>
 
         <div className="p-6">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-lg font-bold text-[#C2185B] flex-1">{title}</h3>
-            <Award size={20} className="text-[#D4AF37] flex-shrink-0" />
+            <h3 className="text-lg font-bold text-[#7b2145] flex-1">{title}</h3>
+            <motion.div
+              whileHover={{ rotate: 15, scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              <Award size={20} className="text-[#c3a248] flex-shrink-0" />
+            </motion.div>
           </div>
 
           <p className="text-sm text-gray-600 mb-3">المدرب: {instructor}</p>
@@ -59,11 +68,11 @@ export default function CourseCard({
 
           <div className="space-y-2 mb-4 text-sm text-gray-600">
             <div className="flex items-center gap-2">
-              <Clock size={16} className="text-[#D4AF37]" />
+              <Clock size={16} className="text-[#c3a248]" />
               <span>{duration}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Users size={16} className="text-[#D4AF37]" />
+              <Users size={16} className="text-[#c3a248]" />
               <span>{participants} مشاركة حالياً</span>
             </div>
           </div>
@@ -74,9 +83,15 @@ export default function CourseCard({
             </span>
           </div>
 
-          <span className="btn-primary w-full block text-center">سجلي في الدورة</span>
+          <motion.span 
+            className="btn-primary w-full block text-center"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            سجلي في الدورة
+          </motion.span>
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 }

@@ -1,4 +1,6 @@
 import TestimonialCard from './TestimonialCard';
+import AnimatedSection, { staggerItemVariants } from './AnimatedSection';
+import { motion } from 'framer-motion';
 
 const testimonials = [
   {
@@ -55,25 +57,33 @@ export default function Stories() {
   return (
     <section id="stories" className="py-20 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <AnimatedSection direction="up" className="text-center mb-16">
           <h2 className="section-title">بصمتها حكاية</h2>
           <p className="section-subtitle">
             قصص نجاح ملهمة لنساء مصريات غيّرن حياتهنّ من خلال المنصة
           </p>
-        </div>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <AnimatedSection stagger={0.15} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} {...testimonial} />
+            <motion.div key={testimonial.id} variants={staggerItemVariants}>
+              <TestimonialCard {...testimonial} />
+            </motion.div>
           ))}
-        </div>
+        </AnimatedSection>
 
-        <div className="mt-16 text-center">
+        <AnimatedSection direction="up" delay={0.3} className="mt-16 text-center">
           <p className="text-lg text-gray-600 mb-6">
             هل تريدين أن تصبحي نجمة من نجوم نون منونة؟
           </p>
-          <button className="btn-primary">شاركي قصتك</button>
-        </div>
+          <motion.button 
+            className="btn-primary"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            شاركي قصتك
+          </motion.button>
+        </AnimatedSection>
       </div>
     </section>
   );

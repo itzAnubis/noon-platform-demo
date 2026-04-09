@@ -192,7 +192,7 @@ export default function Team() {
             
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
-                    <div className="inline-flex items-center justify-center p-4 bg-[#C2185B] rounded-2xl mb-6 shadow-lg shadow-pink-200">
+                    <div className="inline-flex items-center justify-center p-4 bg-[#7b2145] rounded-2xl mb-6 shadow-lg shadow-pink-200">
                         <Users size={32} className="text-white" />
                     </div>
                     <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight font-tajawal">
@@ -208,7 +208,7 @@ export default function Team() {
                     <div className="max-w-4xl mx-auto">
                         <div className="relative group bg-white rounded-[2rem] shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-yellow-200/40 transition-all duration-500 flex flex-col sm:flex-row border border-amber-100 overflow-hidden">
                             {/* Avatar Section */}
-                            <div className="relative flex justify-center items-center sm:w-1/3 bg-gradient-to-br from-[#D4AF37] to-[#B8860B] p-6">
+                            <div className="relative flex justify-center items-center sm:w-1/3 bg-gradient-to-br from-[#c3a248] to-[#B8860B] p-6">
                                 <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
                                 <div className="relative p-1 bg-white rounded-full shadow-xl z-20">
                                     <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white aspect-square bg-white">
@@ -238,7 +238,7 @@ export default function Team() {
                                     {doctor.responsibilities.map((resp, idx) => (
                                         <div key={idx} className="flex items-center gap-3">
                                             <div className="bg-amber-100 p-1.5 rounded-full shrink-0">
-                                                <CheckCircle size={16} className="text-[#D4AF37]" />
+                                                <CheckCircle size={16} className="text-[#c3a248]" />
                                             </div>
                                             <span className="text-base font-medium text-gray-700 leading-relaxed font-tajawal">{resp}</span>
                                         </div>
@@ -257,13 +257,13 @@ export default function Team() {
                     <div className="flex justify-end gap-3">
                         <button 
                             onClick={() => scroll('right')}
-                            className="p-3 rounded-xl bg-white shadow-sm border border-pink-100 text-[#C2185B] hover:bg-[#C2185B] hover:text-white transition-all active:scale-95"
+                            className="p-3 rounded-xl bg-white shadow-sm border border-pink-100 text-[#7b2145] hover:bg-[#7b2145] hover:text-white transition-all active:scale-95"
                         >
                             <ChevronRight size={24} />
                         </button>
                         <button 
                             onClick={() => scroll('left')}
-                            className="p-3 rounded-xl bg-white shadow-sm border border-pink-100 text-[#C2185B] hover:bg-[#C2185B] hover:text-white transition-all active:scale-95"
+                            className="p-3 rounded-xl bg-white shadow-sm border border-pink-100 text-[#7b2145] hover:bg-[#7b2145] hover:text-white transition-all active:scale-95"
                         >
                             <ChevronLeft size={24} />
                         </button>
@@ -281,7 +281,7 @@ export default function Team() {
                             className="relative group bg-white rounded-[2rem] shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-pink-200/40 transition-all duration-500 w-[300px] sm:w-[320px] shrink-0 snap-center flex flex-col border border-white overflow-hidden"
                         >
                             {/* Card Header with Glassmorphism overlay */}
-                            <div className="h-32 bg-gradient-to-br from-[#C2185B] to-pink-500 relative">
+                            <div className="h-32 bg-gradient-to-br from-[#7b2145] to-pink-500 relative">
                                 <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
                             </div>
 
@@ -302,7 +302,7 @@ export default function Team() {
                             {/* Content */}
                             <div className="p-6 pt-4 flex flex-col flex-1">
                                 <div className="text-center mb-6">
-                                    <h3 className="text-xl font-bold text-gray-800 font-tajawal group-hover:text-[#C2185B] transition-colors">
+                                    <h3 className="text-xl font-bold text-gray-800 font-tajawal group-hover:text-[#7b2145] transition-colors">
                                         {member.name}
                                     </h3>
                                     <span className="text-sm font-medium text-pink-500 bg-pink-50 px-3 py-1 rounded-lg mt-2 inline-block">
@@ -314,7 +314,7 @@ export default function Team() {
                                     <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">المسؤوليات</p>
                                     {member.responsibilities.map((resp, idx) => (
                                         <div key={idx} className="flex items-start gap-2">
-                                            <CheckCircle size={14} className="text-[#D4AF37] shrink-0 mt-0.5" />
+                                            <CheckCircle size={14} className="text-[#c3a248] shrink-0 mt-0.5" />
                                             <span className="text-sm text-gray-600 leading-tight">{resp}</span>
                                         </div>
                                     ))}

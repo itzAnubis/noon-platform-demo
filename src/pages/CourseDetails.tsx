@@ -9,7 +9,7 @@ export default function CourseDetails() {
     if (!course) {
         return (
             <section className="py-20 px-4 min-h-screen flex flex-col items-center justify-center">
-                <h2 className="text-3xl font-bold text-[#C2185B] mb-4">
+                <h2 className="text-3xl font-bold text-[#7b2145] mb-4">
                     الدورة غير موجودة
                 </h2>
                 <p className="text-gray-600 mb-8">
@@ -43,7 +43,7 @@ export default function CourseDetails() {
                 <div className="mb-8">
                     <Link
                         to="/training"
-                        className="inline-flex items-center gap-2 text-[#C2185B] hover:text-[#D4AF37] transition-colors font-medium"
+                        className="inline-flex items-center gap-2 text-[#7b2145] hover:text-[#c3a248] transition-colors font-medium"
                     >
                         <ArrowRight size={18} />
                         <span>العودة إلى الدورات</span>
@@ -66,7 +66,7 @@ export default function CourseDetails() {
                 <div className="bg-white rounded-2xl shadow-lg p-8">
                     <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
                         <div className="flex-1">
-                            <h1 className="text-3xl md:text-4xl font-bold text-[#C2185B] mb-3">
+                            <h1 className="text-3xl md:text-4xl font-bold text-[#7b2145] mb-3">
                                 {course.title}
                             </h1>
                             <p className="text-lg text-gray-600 leading-relaxed">
@@ -85,8 +85,8 @@ export default function CourseDetails() {
                     <div className="border-t border-gray-100 pt-6">
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                             <div className="flex items-center gap-3 bg-pink-50 rounded-xl p-4">
-                                <div className="p-2 bg-[#C2185B] bg-opacity-10 rounded-lg">
-                                    <Award size={24} className="text-[#C2185B]" />
+                                <div className="p-2 bg-[#7b2145] bg-opacity-10 rounded-lg">
+                                    <Award size={24} className="text-[#7b2145]" />
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500">المدرب</p>
@@ -96,8 +96,8 @@ export default function CourseDetails() {
                                 </div>
                             </div>
                             <div className="flex items-center gap-3 bg-pink-50 rounded-xl p-4">
-                                <div className="p-2 bg-[#D4AF37] bg-opacity-10 rounded-lg">
-                                    <Clock size={24} className="text-[#D4AF37]" />
+                                <div className="p-2 bg-[#c3a248] bg-opacity-10 rounded-lg">
+                                    <Clock size={24} className="text-[#c3a248]" />
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500">المدة</p>
@@ -107,8 +107,8 @@ export default function CourseDetails() {
                                 </div>
                             </div>
                             <div className="flex items-center gap-3 bg-pink-50 rounded-xl p-4">
-                                <div className="p-2 bg-[#C2185B] bg-opacity-10 rounded-lg">
-                                    <Users size={24} className="text-[#C2185B]" />
+                                <div className="p-2 bg-[#7b2145] bg-opacity-10 rounded-lg">
+                                    <Users size={24} className="text-[#7b2145]" />
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-500">المشاركات</p>

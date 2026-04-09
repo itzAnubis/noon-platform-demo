@@ -7,9 +7,9 @@ export default {
         arabic: ['Cairo', 'sans-serif'],
       },
       colors: {
-        primary: '#C2185B',
-        secondary: '#D4AF37',
-        accent: '#D4AF37',
+        primary: '#7b2145',
+        secondary: '#c3a248',
+        accent: '#6e0d34',
       },
     },
   },

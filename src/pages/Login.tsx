@@ -39,7 +39,7 @@ export default function Login() {
         {/* Logo */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-2">
-            <span className="text-[#C2185B]">نُ</span>
+            <span className="text-[#7b2145]">نُ</span>
             <span className="text-gray-800 mr-2">نون</span>
           </h1>
           <p className="text-gray-500">مرحباً بك مجدداً!</p>
@@ -110,11 +110,11 @@ export default function Login() {
                 type="checkbox"
                 checked={rememberMe}
                 onChange={(e) => setRememberMe(e.target.checked)}
-                className="w-4 h-4 accent-[#C2185B] rounded"
+                className="w-4 h-4 accent-[#7b2145] rounded"
               />
               <span className="text-sm text-gray-600">تذكرني</span>
             </label>
-            <button type="button" className="text-sm text-[#C2185B] hover:underline font-medium">
+            <button type="button" className="text-sm text-[#7b2145] hover:underline font-medium">
               نسيت كلمة المرور؟
             </button>
           </div>
@@ -137,7 +137,7 @@ export default function Login() {
           ليس لديكِ حساب؟{' '}
           <Link
             to="/signup"
-            className="text-[#C2185B] font-semibold hover:underline"
+            className="text-[#7b2145] font-semibold hover:underline"
           >
             سجلي الآن
           </Link>

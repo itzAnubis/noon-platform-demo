@@ -5,6 +5,27 @@
 * {
   font-family: 'Cairo', sans-serif;
   direction: rtl;
+  scrollbar-width: thin;
+  scrollbar-color: #c3a248 #f8f9fa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f9fa; 
+}
+::-webkit-scrollbar-thumb {
+  background: #c3a248; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7b2145; 
 }
 
 html, body {
@@ -20,15 +41,15 @@ html, body {
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-[#C2185B] text-white rounded-lg font-semibold hover:bg-rose-800 transition-all duration-300 shadow-md hover:shadow-lg;
+    @apply px-6 py-3 bg-[#7b2145] text-white rounded-lg font-semibold hover:bg-rose-800 transition-all duration-300 shadow-md hover:shadow-lg;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border-2 border-[#D4AF37] text-[#C2185B] rounded-lg font-semibold hover:bg-[#D4AF37] hover:bg-opacity-10 transition-all duration-300;
+    @apply px-6 py-3 border-2 border-[#c3a248] text-[#7b2145] rounded-lg font-semibold hover:bg-[#c3a248] hover:bg-opacity-10 transition-all duration-300;
   }
 
   .section-title {
-    @apply text-4xl font-bold text-[#C2185B] mb-2;
+    @apply text-4xl font-bold text-[#7b2145] mb-2;
   }
 
   .section-subtitle {
@@ -36,7 +57,7 @@ html, body {
   }
 
   .card-base {
-    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden;
+    @apply bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden;
   }
 
   .scroll-smooth-anchor {
@@ -48,23 +69,23 @@ html, body {
     @apply w-full px-5 py-3 pr-12 bg-white border-2 border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 outline-none transition-all duration-300;
   }
   .search-input:focus {
-    @apply border-[#C2185B] shadow-lg shadow-pink-100;
+    @apply border-[#7b2145] shadow-lg shadow-pink-100;
   }
 
   /* Filter pills */
   .filter-pill {
-    @apply px-5 py-2 rounded-full text-sm font-semibold border-2 border-gray-200 text-gray-600 bg-white cursor-pointer transition-all duration-300 hover:border-[#C2185B] hover:text-[#C2185B] hover:bg-pink-50 whitespace-nowrap;
+    @apply px-5 py-2 rounded-full text-sm font-semibold border-2 border-gray-200 text-gray-600 bg-white cursor-pointer transition-all duration-300 hover:border-[#7b2145] hover:text-[#7b2145] hover:bg-pink-50 whitespace-nowrap;
   }
   .filter-pill-active {
-    @apply px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#C2185B] text-white bg-[#C2185B] cursor-pointer transition-all duration-300 shadow-md whitespace-nowrap;
+    @apply px-5 py-2 rounded-full text-sm font-semibold border-2 border-[#7b2145] text-white bg-[#7b2145] cursor-pointer transition-all duration-300 shadow-md whitespace-nowrap;
   }
 
   /* Tag pills (smaller, gold accent) */
   .tag-pill {
-    @apply px-4 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200 text-gray-600 bg-white cursor-pointer transition-all duration-300 hover:border-[#D4AF37] hover:text-[#D4AF37] hover:bg-yellow-50 whitespace-nowrap;
+    @apply px-4 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200 text-gray-600 bg-white cursor-pointer transition-all duration-300 hover:border-[#c3a248] hover:text-[#c3a248] hover:bg-yellow-50 whitespace-nowrap;
   }
   .tag-pill-active {
-    @apply px-4 py-1.5 rounded-full text-xs font-semibold border-2 border-[#D4AF37] text-gray-800 bg-[#D4AF37] bg-opacity-20 cursor-pointer transition-all duration-300 whitespace-nowrap;
+    @apply px-4 py-1.5 rounded-full text-xs font-semibold border-2 border-[#c3a248] text-gray-800 bg-[#c3a248] bg-opacity-20 cursor-pointer transition-all duration-300 whitespace-nowrap;
   }
 
   /* Auth card */
@@ -77,7 +98,7 @@ html, body {
     @apply w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 outline-none transition-all duration-300;
   }
   .form-input:focus {
-    @apply border-[#C2185B] bg-white shadow-md shadow-pink-50;
+    @apply border-[#7b2145] bg-white shadow-md shadow-pink-50;
   }
 
   /* Sort select */
@@ -85,6 +106,69 @@ html, body {
     @apply px-4 py-2.5 bg-white border-2 border-gray-200 rounded-xl text-gray-700 text-sm font-medium outline-none cursor-pointer transition-all duration-300;
   }
   .sort-select:focus {
-    @apply border-[#C2185B];
+    @apply border-[#7b2145];
   }
+
+  /* Loading spinner */
+  .loading-screen {
+    @apply fixed inset-0 z-[200] flex flex-col items-center justify-center bg-white;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-float-delayed {
+    animation: float 6s ease-in-out 3s infinite;
+  }
+  .animate-shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  .animate-gradient-x {
+    animation: gradient-x 8s ease infinite;
+    background-size: 200% 200%;
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Loading spinner */
+@keyframes spin-loader {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-spin {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #7b2145;
+  border-right: 4px solid #c3a248;
+  border-radius: 50%;
+  animation: spin-loader 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }

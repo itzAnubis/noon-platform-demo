@@ -48,7 +48,7 @@ export default function Signup() {
         {/* Logo */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-2">
-            <span className="text-[#C2185B]">نُ</span>
+            <span className="text-[#7b2145]">نُ</span>
             <span className="text-gray-800 mr-2">نون</span>
           </h1>
           <p className="text-gray-500">انضمي إلى مجتمع نون!</p>
@@ -174,15 +174,15 @@ export default function Signup() {
                 type="checkbox"
                 checked={acceptTerms}
                 onChange={(e) => setAcceptTerms(e.target.checked)}
-                className="w-4 h-4 accent-[#C2185B] rounded mt-1"
+                className="w-4 h-4 accent-[#7b2145] rounded mt-1"
               />
               <span className="text-sm text-gray-600">
                 أوافق على{' '}
-                <button type="button" className="text-[#C2185B] hover:underline font-medium">
+                <button type="button" className="text-[#7b2145] hover:underline font-medium">
                   الشروط والأحكام
                 </button>{' '}
                 و{' '}
-                <button type="button" className="text-[#C2185B] hover:underline font-medium">
+                <button type="button" className="text-[#7b2145] hover:underline font-medium">
                   سياسة الخصوصية
                 </button>
               </span>
@@ -210,7 +210,7 @@ export default function Signup() {
           لديكِ حساب بالفعل؟{' '}
           <Link
             to="/login"
-            className="text-[#C2185B] font-semibold hover:underline"
+            className="text-[#7b2145] font-semibold hover:underline"
           >
             سجلي الدخول
           </Link>

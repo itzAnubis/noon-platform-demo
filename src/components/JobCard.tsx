@@ -1,4 +1,5 @@
 import { Briefcase, MapPin, DollarSign } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface JobCardProps {
   title: string;
@@ -32,14 +33,22 @@ export default function JobCard({
   };
 
   return (
-    <div className="card-base p-6">
+    <motion.div 
+      className="card-base p-6"
+      whileHover={{ y: -8, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
+    >
       <div className="mb-4">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-[#C2185B] mb-1">{title}</h3>
+            <h3 className="text-xl font-bold text-[#7b2145] mb-1">{title}</h3>
             <p className="text-gray-600 font-medium">{company}</p>
           </div>
-          <Briefcase size={28} className="text-[#D4AF37] flex-shrink-0 mr-3" />
+          <motion.div
+            whileHover={{ rotate: 15, scale: 1.1 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <Briefcase size={28} className="text-[#c3a248] flex-shrink-0 mr-3" />
+          </motion.div>
         </div>
 
         <div className="flex flex-wrap gap-2 mb-4">
@@ -51,11 +60,11 @@ export default function JobCard({
 
       <div className="space-y-2 mb-4 text-gray-600">
         <div className="flex items-center gap-2">
-          <DollarSign size={16} className="text-[#D4AF37]" />
+          <DollarSign size={16} className="text-[#c3a248]" />
           <span>{salary}</span>
         </div>
         <div className="flex items-center gap-2">
-          <MapPin size={16} className="text-[#D4AF37]" />
+          <MapPin size={16} className="text-[#c3a248]" />
           <span>عمل عن بُعد - {location}</span>
         </div>
       </div>
@@ -65,14 +74,20 @@ export default function JobCard({
         <ul className="text-sm text-gray-600 space-y-1">
           {requirements.map((req, idx) => (
             <li key={idx} className="flex items-start gap-2">
-              <span className="text-[#D4AF37] mt-1">•</span>
+              <span className="text-[#c3a248] mt-1">•</span>
               <span>{req}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      <button className="btn-primary w-full">قدمي الآن</button>
-    </div>
+      <motion.button 
+        className="btn-primary w-full"
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
+      >
+        قدمي الآن
+      </motion.button>
+    </motion.div>
   );
 }
