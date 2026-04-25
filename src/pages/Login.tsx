@@ -38,10 +38,11 @@ export default function Login() {
       <div className="auth-card">
         {/* Logo */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">
-            <span className="text-[#7b2145]">نُ</span>
-            <span className="text-gray-800 mr-2">نون</span>
-          </h1>
+          <img
+            src="/NooN-LoGo3.png"
+            alt="NooN Logo"
+            className="h-20 mx-auto mb-2 object-contain"
+          />
           <p className="text-gray-500">مرحباً بك مجدداً!</p>
         </div>
 
