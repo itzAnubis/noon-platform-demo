@@ -163,7 +163,7 @@ const teamMembers: TeamMember[] = [
             'تقديم الدعم اللازم لنجاح المبادرات',
             'المشاركة في تطوير وتنمية المجتمع',
         ],
-        avatar: 'public/images/noon_team/كنزي.jpeg',
+        avatar: '/images/noon_team/كنزي.jpeg',
     },
 ];
 export default function Team() {
