@@ -31,12 +31,6 @@ const teamMembers: TeamMember[] = [
         avatar: '/images/noon_team/سهيلة كمال.jpeg',
     },
     {
-        id: 5,
-        name: 'مريم حسن',
-        role: 'عضو فريق نون',
-        avatar: '/images/noon_team/مريم حسن.jpeg',
-    },
-    {
         id: 3,
         name: 'شهاب سلامة',
         role: 'عضو فريق نون',
@@ -47,6 +41,12 @@ const teamMembers: TeamMember[] = [
         name: 'عبدالله ياسر',
         role: 'عضو فريق نون',
         avatar: '/images/noon_team/عبدالله ياسر.jpeg',
+    },
+    {
+        id: 2, // تم نقل سلمى للنهاية
+        name: 'سلمى أشرف',
+        role: 'عضو فريق نون',
+        avatar: '/images/noon_team/سلمى اشرف.jpeg',
     },
     {
         id: 9,
@@ -61,10 +61,10 @@ const teamMembers: TeamMember[] = [
         avatar: '/images/noon_team/عبدالرحمن مجدى.jpeg',
     },
     {
-        id: 6,
-        name: 'آية عبد الرؤوف',
+        id: 5,
+        name: 'مريم حسن',
         role: 'عضو فريق نون',
-        avatar: '/images/noon_team/اية عبد الرؤوف.jpeg',
+        avatar: '/images/noon_team/مريم حسن.jpeg',
     },
     {
         id: 7,
@@ -97,10 +97,10 @@ const teamMembers: TeamMember[] = [
         avatar: '/images/noon_team/كنزي.jpeg',
     },
     {
-        id: 2, // تم نقل سلمى للنهاية
-        name: 'سلمى أشرف',
+        id: 6,
+        name: 'آية عبد الرؤوف',
         role: 'عضو فريق نون',
-        avatar: '/images/noon_team/سلمى اشرف.jpeg',
+        avatar: '/images/noon_team/اية عبد الرؤوف.jpeg',
     },
 ];
 
@@ -110,7 +110,7 @@ export default function Team() {
             <h1 className="sr-only">فريق العمل</h1>
             <style>{`
                 .font-tajawal { font-family: 'Tajawal', sans-serif; }
-            `}</style>
+                `}</style>
             
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
